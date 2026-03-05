@@ -1,8 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "Bash(grep -o 'Two Ways to Explore[^\\\\\\\\]*' \"C:/Users/szhan/.claude/projects/c--Users-szhan-OneDrive---University-Of-Oregon-Desktop-Internship-Job-Portfolio-Web/4b99ef2f-ea5c-40eb-b857-004539e8e088.jsonl\")",
-      "Bash(python3 -c \":*)"
-    ]
-  }
-}
