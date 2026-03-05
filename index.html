@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DC Street Tree Health</title>
+
+  <!-- Mapbox GL JS -->
+  <link href="https://api.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.css" rel="stylesheet" />
+  <script src="https://api.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.js"></script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div id="app">
+
+    <!-- ModBar -->
+    <div id="modebar"></div>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+      <button id="sidebar-close" title="Close sidebar">×</button>
+      <div id="region-selector"></div>
+      <div id="sidebar-charts"></div>
+    </div>
+
+    <!-- Map -->
+    <div id="map">
+      <!-- Sidebar toggle overlay (top-left, shown only when sidebar closed) -->
+      <div id="btn-sidebar-overlay">
+        <button id="btn-sidebar" class="util-btn">☰ Sidebar</button>
+      </div>
+
+      <!-- Full Screen overlay button (top-right of map) -->
+      <div id="btn-fullscreen-overlay">
+        <button id="btn-fullscreen" class="util-btn">⛶ Full Screen</button>
+      </div>
+
+      <!-- Filter Panel (overlays map) -->
+      <div id="filter-panel"></div>
+
+      <!-- About Panel -->
+      <div id="about-panel">
+        <button id="about-toggle">
+          <span>About</span>
+          <span id="about-arrow"></span>
+        </button>
+        <div id="about-body">
+          <p class="about-text">
+            This map visualizes street tree disease and health condition data
+            across Washington, D.C.'s eight wards, based on field inspections
+            conducted by urban forestry staff.
+          </p>
+          <div class="about-meta">
+            <div>DATA SOURCE</div>
+            <div><a href="https://opendata.dc.gov/datasets/DCGIS::urban-forestry-street-trees/about" target="_blank">DC Open Data — Urban Forestry Street Trees</a></div>
+            <br>
+            <div>BUILT WITH</div>
+            <div>Mapbox GL JS · Claude AI</div>
+            <br>
+            <div>© 2026 Shiyu Zhang. All rights reserved.</div>
+          </div>
+          <button id="btn-replay-tour" class="replay-btn">Replay Tour</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- JS -->
+  <script>const MAPBOX_TOKEN = "pk.eyJ1Ijoic2hpeXUtemhhbmciLCJhIjoiY2x1bGhqd2NxMTE3bDJxcDU2dHRlbzNwOCJ9.d8udiK4bPXGEaGDJQ5Aj-w";</script>
+  <script src="constants.js"></script>
+  <script src="modebar.js"></script>
+  <script src="sidebar.js"></script>
+  <script src="filter.js"></script>
+  <script src="main.js"></script>
+  <script src="about.js"></script>
+  <script src="ui.js"></script>
+  <script src="tutorial.js"></script>
+</body>
+</html>
